@@ -68,24 +68,67 @@
     100% { filter: drop-shadow(0 0 10px var(--violet)); }
   }
 
-  /* Avatar */
-  .avatar-placeholder {
+  /* Avatar cosmique */
+  .avatar {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, var(--pink), var(--cyan2), var(--violet-dark));
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 2rem auto 1rem;
-    position: relative;
+    border: 3px solid var(--cyan2);
+    box-shadow: 0 0 20px var(--cyan2), 0 0 40px var(--pink);
+    overflow: hidden;
   }
-  .avatar-placeholder::after {
-    content: "👩🏽‍🎨💉";
-    font-size: 4rem;
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  /* Projects section */
+  /* CTA Buttons */
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cta-buttons a {
+    padding: 0.8rem 2rem;
+    background: linear-gradient(90deg, var(--pink), var(--cyan));
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+    color:#fff;
+  }
+  .cta-buttons a:hover {
+    filter: brightness(1.3);
+  }
+
+  /* À propos / compétences */
+  .about {
+    text-align: center;
+    padding: 4rem 2rem;
+  }
+  .skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .skill-badge {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(90deg, var(--violet-dark), var(--magenta));
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--pink);
+    transition: 0.3s;
+  }
+  .skill-badge:hover {
+    transform: scale(1.1);
+  }
+
+  /* Projects */
   .projects {
     display: flex;
     flex-wrap: wrap;
@@ -95,15 +138,20 @@
   }
   .project-card {
     width: 300px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
   }
-  .project-card h3 {
-    margin-top: 1rem;
-    color: var(--pink);
+  .project-card h3 { margin-top: 1rem; color: var(--pink);}
+  .project-card p { margin-top: 0.5rem; color: var(--cyan2); font-size: 0.95rem; }
+  .project-image {
+    height: 150px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, var(--pink), var(--cyan2));
+    transition: all 0.3s;
   }
-  .project-card p {
-    margin-top: 0.5rem;
-    color: var(--cyan2);
-    font-size: 0.95rem;
+  .project-card:hover .project-image {
+    filter: brightness(1.2) hue-rotate(20deg);
   }
 
   /* Contact */
@@ -111,19 +159,8 @@
     padding: 4rem 2rem;
     text-align: center;
   }
-  .contact a {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: linear-gradient(90deg, var(--pink), var(--cyan));
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  .contact a:hover {
-    filter: brightness(1.3);
-  }
 
-  /* Animations background */
+  /* Background animation */
   .bg-animation {
     position: absolute;
     width: 200%;
@@ -143,6 +180,7 @@
   /* Responsive */
   @media(max-width:768px){
     .projects { flex-direction: column; align-items: center; }
+    .cta-buttons { flex-direction: column; }
   }
 </style>
 </head>
@@ -151,26 +189,45 @@
 <div class="bg-animation"></div>
 
 <header>
-  <div class="avatar-placeholder"></div>
+  <div class="avatar">
+    <img src="LIEN_VOTRE_AVATAR_GENERÉ" alt="Orlane Saulais Avatar Cosmique">
+  </div>
   <h1>Orlane Saulais</h1>
   <p>Graphic Designer – UI/UX & Conception Graphique de Communication</p>
+  <div class="cta-buttons">
+    <a href="#projects">Voir mes projets</a>
+    <a href="CV_ORLANE.pdf" target="_blank">Télécharger CV</a>
+    <a href="PORTFOLIO_INTERACTIF.pdf" target="_blank">Portfolio interactif</a>
+  </div>
 </header>
 
-<section class="projects">
+<section class="about">
+  <h2>À propos de moi</h2>
+  <p>Je suis une designer graphique spécialisée en UI/UX et communication visuelle, passionnée par les univers cyberpunk et les expériences immersives.</p>
+  <div class="skills">
+    <span class="skill-badge">Figma</span>
+    <span class="skill-badge">Photoshop</span>
+    <span class="skill-badge">Illustrator</span>
+    <span class="skill-badge">After Effects</span>
+    <span class="skill-badge">Adobe XD</span>
+  </div>
+</section>
+
+<section class="projects" id="projects">
   <div class="project-card glass">
-    <div style="height:150px; background: linear-gradient(135deg, var(--pink), var(--cyan2)); border-radius: 15px;"></div>
+    <div class="project-image"></div>
     <h3>Projet 1</h3>
-    <p>Description du projet 1. Ajoutez vos images et détails ici.</p>
+    <p>Description du projet 1. Cliquez pour découvrir plus.</p>
   </div>
   <div class="project-card glass">
-    <div style="height:150px; background: linear-gradient(135deg, var(--violet), var(--magenta)); border-radius: 15px;"></div>
+    <div class="project-image" style="background: linear-gradient(135deg, var(--violet), var(--magenta));"></div>
     <h3>Projet 2</h3>
-    <p>Description du projet 2. Ajoutez vos images et détails ici.</p>
+    <p>Description du projet 2. Cliquez pour découvrir plus.</p>
   </div>
   <div class="project-card glass">
-    <div style="height:150px; background: linear-gradient(135deg, var(--cyan2), var(--blue-light)); border-radius: 15px;"></div>
+    <div class="project-image" style="background: linear-gradient(135deg, var(--cyan2), var(--blue-light));"></div>
     <h3>Projet 3</h3>
-    <p>Description du projet 3. Ajoutez vos images et détails ici.</p>
+    <p>Description du projet 3. Cliquez pour découvrir plus.</p>
   </div>
 </section>
 
