@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>URBAN DROP — Drop limité</title>
+
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+
+    <style>
+      .hero {
+        min-height: 70vh;
+        background: radial-gradient(1200px 500px at 10% 10%, rgba(13,110,253,.18), transparent 60%),
+                    radial-gradient(900px 400px at 90% 20%, rgba(25,135,84,.18), transparent 60%),
+                    linear-gradient(135deg, #0b0f19, #111827);
+      }
+      .badge-soft {
+        background: rgba(255,255,255,.12);
+        border: 1px solid rgba(255,255,255,.18);
+        color: #fff;
+      }
+      .glass {
+        background: rgba(255,255,255,.06);
+        border: 1px solid rgba(255,255,255,.10);
+        backdrop-filter: blur(8px);
+      }
+    </style>
+  </head>
+
+
+  <body class="bg-dark text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#">URBAN DROP</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div id="nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#concept">Concept</a></li>
+            <li class="nav-item"><a class="nav-link" href="#collection">Collection</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          </ul>
+          <a class="btn btn-primary ms-lg-3" href="#cta">Accéder au drop</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <header class="hero d-flex align-items-center">
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge badge-soft rounded-pill px-3 py-2 mb-3">
+              Drop limité • Ouverture à 18h00
+            </span>
+            <h1 class="display-5 fw-bold lh-1 mb-3">
+              Collection limitée <span class="text-primary">URBAN DROP</span><br />
+              -30% aujourd’hui
+            </h1>
+            <p class="lead text-secondary mb-4">
+              Une landing page prête pour une campagne à fort trafic : rapide, claire, et orientée conversion.
+              Modifie le texte, le prix, ou le CTA pour ta campagne.
+            </p>
+
+
+            <div class="d-flex flex-wrap gap-2">
+              <a class="btn btn-primary btn-lg" href="#cta">Je réserve ma pièce</a>
+              <a class="btn btn-outline-light btn-lg" href="#collection">Découvrir la collection</a>
+            </div>
+
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <span class="badge bg-success-subtle text-success border border-success-subtle">Stock : 1 500 pièces</span>
+              <span class="badge bg-info-subtle text-info border border-info-subtle">Livraison 48h</span>
+              <span class="badge bg-warning-subtle text-warning border border-warning-subtle">Offre limitée</span>
+            </div>
+          </div>
+
+
+          <div class="col-lg-5">
+            <div class="p-4 rounded-4 glass">
+              <h2 class="h5 fw-semibold mb-3">Mini formulaire de conversion</h2>
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" placeholder="prenom.nom@email.com" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Taille</label>
+                  <select class="form-select">
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                  </select>
+                </div>
+                <div class="d-grid">
+                  <a id="cta" class="btn btn-primary btn-lg" href="#" role="button">
+                    Recevoir le lien du drop
+                  </a>
+                </div>
+                <p class="small text-secondary mt-3 mb-0">
+                  Astuce : remplace ce bouton par ton lien Shopify / Typeform / Calendly.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Concept -->
+    <section id="concept" class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="p-4 rounded-4 border border-secondary bg-dark">
+              <h3 class="h5 fw-semibold">Performance</h3>
+              <p class="text-secondary mb-0">
+                Une page simple charge vite : meilleure expérience, meilleur taux de conversion.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="p-4 rounded-4 border border-secondary bg-dark">
+              <h3 class="h5 fw-semibold">Disponibilité</h3>
+              <p class="text-secondary mb-0">
+                Ta campagne reste accessible même lors d’un pic de trafic.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="p-4 rounded-4 border border-secondary bg-dark">
+              <h3 class="h5 fw-semibold">Scalabilité</h3>
+              <p class="text-secondary mb-0">
+                Ton hébergement s’adapte à la demande : l’infra soutient le marketing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Collection -->
+    <section id="collection" class="py-5 bg-black">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-4">
+          <div>
+            <h2 class="h3 fw-bold mb-1">La collection</h2>
+            <p class="text-secondary mb-0">3 produits exemples (modifiables en 2 minutes).</p>
+          </div>
+          <a class="btn btn-outline-light" href="#cta">Accéder au drop</a>
+        </div>
+
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card bg-dark border-secondary h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Hoodie “Night”</h3>
+                <p class="text-secondary">Coupe oversize • Coton épais • Sérigraphie</p>
+                <p class="mb-0"><span class="fw-semibold text-primary">79€</span> <span class="text-secondary text-decoration-line-through ms-2">99€</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border-secondary h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">T-shirt “Drop”</h3>
+                <p class="text-secondary">Unisexe • 240g • Edition limitée</p>
+                <p class="mb-0"><span class="fw-semibold text-primary">39€</span> <span class="text-secondary text-decoration-line-through ms-2">49€</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card bg-dark border-secondary h-100">
+              <div class="card-body">
+                <h3 class="h5 card-title">Casquette “Urban”</h3>
+                <p class="text-secondary">Broderie • Ajustable • Stock limité</p>
+                <p class="mb-0"><span class="fw-semibold text-primary">29€</span> <span class="text-secondary text-decoration-line-through ms-2">39€</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <p class="text-secondary small mt-4 mb-0">
+          Pour le TP : change les noms, prix, et messages pour ta propre campagne.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section id="faq" class="py-5">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">FAQ</h2>
+
+
+        <div class="accordion accordion-flush" id="faqAcc">
+          <div class="accordion-item bg-dark border border-secondary rounded-3 mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                Pourquoi une landing page plutôt qu’un site complet ?
+              </button>
+            </h2>
+            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body text-secondary">
+                Une landing page est plus rapide, plus simple, et mieux optimisée pour une conversion.
+              </div>
+            </div>
+          </div>
+
+
+          <div class="accordion-item bg-dark border border-secondary rounded-3 mb-2">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                Est-ce que ça tient une campagne à fort trafic ?
+              </button>
+            </h2>
+            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body text-secondary">
+                Oui : le principe Cloud (CDN, mise en cache, infrastructure scalable) permet d’absorber un pic, si la page est bien conçue.
+              </div>
+            </div>
+          </div>
+
+
+          <div class="accordion-item bg-dark border border-secondary rounded-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-dark text-light" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                Que dois-je modifier pour mon TP ?
+              </button>
+            </h2>
+            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
+              <div class="accordion-body text-secondary">
+                Modifie le titre, l’offre, le CTA, et au moins un bloc “collection”. Ensuite commit sur GitHub : Vercel redéploie automatiquement.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="py-4 border-top border-secondary">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <p class="mb-0 text-secondary">© 2026 URBAN DROP — Demo pédagogique</p>
+        <a class="text-secondary text-decoration-none" href="#top">Haut de page</a>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap JS (optionnel, pour l'accordion/navbar) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
