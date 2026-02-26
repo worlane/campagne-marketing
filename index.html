@@ -1,245 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orlane Saulais - Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  /* Reset & base */
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: 'Roboto', sans-serif; background: #0a001a; color: #fff; overflow-x: hidden; }
-  a { text-decoration: none; color: inherit; }
+  <meta charset="UTF-8" />
+  <title>Oasis Studio – Architecture & Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #050608;
+      --accent: #d4a056;
+      --accent-soft: #f3d7a2;
+      --text: #f7f3ea;
+      --muted: #a9b0c2;
+      --shadow-3d: 0 18px 40px rgba(0, 0, 0, 0.55);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+    }
 
-  /* Palette cyberpunk */
-  :root {
-    --pink: #D403E1;
-    --cyan: #03CCFF;
-    --cyan2: #09FBFF;
-    --violet-dark: #460071;
-    --violet: #4C5DD7;
-    --deep-purple: #260B68;
-    --magenta: #C231C9;
-    --green: #1DO225;
-    --blue-light: #68A2EB;
-  }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151a24 0, #050608 55%);
+      color: var(--text);
+    }
 
-  /* Glassmorphism card */
-  .glass {
-    backdrop-filter: blur(15px);
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .glass:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 30px var(--cyan2);
-  }
+    a { text-decoration: none; color: inherit; }
 
-  /* Header */
-  header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    background: linear-gradient(90deg, var(--pink), var(--cyan), var(--violet));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: neon 2s ease-in-out infinite alternate;
-  }
-  header p {
-    font-size: 1.2rem;
-    color: var(--cyan2);
-    margin-top: 1rem;
-  }
-  @keyframes neon {
-    0% { filter: drop-shadow(0 0 5px var(--pink)); }
-    50% { filter: drop-shadow(0 0 20px var(--cyan2)); }
-    100% { filter: drop-shadow(0 0 10px var(--violet)); }
-  }
+    .page {
+      max-width: 1200px;
+      margin: auto;
+      padding: 24px;
+    }
 
-  /* Avatar cosmique */
-  .avatar {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 2rem auto 1rem;
-    border: 3px solid var(--cyan2);
-    box-shadow: 0 0 20px var(--cyan2), 0 0 40px var(--pink);
-    overflow: hidden;
-  }
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: rgba(10, 16, 26, 0.85);
+      border: 1px solid rgba(212, 160, 86, 0.35);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+    }
 
-  /* CTA Buttons */
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .cta-buttons a {
-    padding: 0.8rem 2rem;
-    background: linear-gradient(90deg, var(--pink), var(--cyan));
-    border-radius: 50px;
-    font-weight: bold;
-    transition: 0.3s;
-    color:#fff;
-  }
-  .cta-buttons a:hover {
-    filter: brightness(1.3);
-  }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--accent-soft);
+    }
 
-  /* À propos / compétences */
-  .about {
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-  .skills {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1.5rem;
-  }
-  .skill-badge {
-    padding: 0.5rem 1rem;
-    background: linear-gradient(90deg, var(--violet-dark), var(--magenta));
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 0 10px var(--pink);
-    transition: 0.3s;
-  }
-  .skill-badge:hover {
-    transform: scale(1.1);
-  }
-
-  /* Projects */
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
-  }
-  .project-card {
-    width: 300px;
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .project-card h3 { margin-top: 1rem; color: var(--pink);}
-  .project-card p { margin-top: 0.5rem; color: var(--cyan2); font-size: 0.95rem; }
-  .project-image {
-    height: 150px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, var(--pink), var(--cyan2));
-    transition: all 0.3s;
-  }
-  .project-card:hover .project-image {
-    filter: brightness(1.2) hue-rotate(20deg);
-  }
-
-  /* Contact */
-  .contact {
-    padding: 4rem 2rem;
-    text-align: center;
-  }
-
-  /* Background animation */
-  .bg-animation {
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background: radial-gradient(circle at 50% 50%, var(--cyan), transparent 70%), radial-gradient(circle at 20% 30%, var(--pink), transparent 60%);
-    animation: moveBG 20s linear infinite;
-    z-index: -1;
-  }
-  @keyframes moveBG {
-    0% { transform: translate(0,0) rotate(0deg); }
-    50% { transform: translate(50px,50px) rotate(180deg); }
-    100% { transform: translate(0,0) rotate(360deg); }
-  }
-
-  /* Responsive */
-  @media(max-width:768px){
-    .projects { flex-direction: column; align-items: center; }
-    .cta-buttons { flex-direction: column; }
-  }
-</style>
-</head>
-<body>
-
-<div class="bg-animation"></div>
-
-<header>
-  <div class="avatar">
-    <img src="LIEN_VOTRE_AVATAR_GENERÉ" alt="Orlane Saulais Avatar Cosmique">
-  </div>
-  <h1>Orlane Saulais</h1>
-  <p>Graphic Designer – UI/UX & Conception Graphique de Communication</p>
-  <div class="cta-buttons">
-    <a href="#projects">Voir mes projets</a>
-    <a href="CV_ORLANE.pdf" target="_blank">Télécharger CV</a>
-    <a href="PORTFOLIO_INTERACTIF.pdf" target="_blank">Portfolio interactif</a>
-  </div>
-</header>
-
-<section class="about">
-  <h2>À propos de moi</h2>
-  <p>Je suis une designer graphique spécialisée en UI/UX et communication visuelle, passionnée par les univers cyberpunk et les expériences immersives.</p>
-  <div class="skills">
-    <span class="skill-badge">Figma</span>
-    <span class="skill-badge">Photoshop</span>
-    <span class="skill-badge">Illustrator</span>
-    <span class="skill-badge">After Effects</span>
-    <span class="skill-badge">Adobe XD</span>
-  </div>
-</section>
-
-<section class="projects" id="projects">
-  <div class="project-card glass">
-    <div class="project-image"></div>
-    <h3>Projet 1</h3>
-    <p>Description du projet 1. Cliquez pour découvrir plus.</p>
-  </div>
-  <div class="project-card glass">
-    <div class="project-image" style="background: linear-gradient(135deg, var(--violet), var(--magenta));"></div>
-    <h3>Projet 2</h3>
-    <p>Description du projet 2. Cliquez pour découvrir plus.</p>
-  </div>
-  <div class="project-card glass">
-    <div class="project-image" style="background: linear-gradient(135deg, var(--cyan2), var(--blue-light));"></div>
-    <h3>Projet 3</h3>
-    <p>Description du projet 3. Cliquez pour découvrir plus.</p>
-  </div>
-</section>
-
-<section class="contact">
-  <a href="https://www.linkedin.com/in/orlane-saulais" target="_blank">Contactez-moi sur LinkedIn</a>
-</section>
-
-<!-- Musique cyberpunk libre de droit -->
-<audio autoplay loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-  Votre navigateur ne supporte pas la lecture audio.
-</audio>
-
-</body>
-</html>
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #fbe9c8, #d4a056);
+      border: 1px solid rgba(243, 215, 162, 0.7);
+      box-shadow: 0 0 12px rgba(243, 
