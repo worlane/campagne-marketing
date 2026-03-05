@@ -3,162 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segundo Primo | Luxe de Seconde Main Entre Étudiants</title>
+    <title>Segundo Primo | Expert Luxe Seconde Main</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, .serif { font-family: 'Playfair Display', serif; }
-        .gradient-gold { background: linear-gradient(135deg, #d4af37 0%, #f9f295 50%, #d4af37 100%); }
+        .nav-link { transition: all 0.3s; position: relative; }
+        .nav-link:hover { color: #b45309; }
+        .urgent-tag { animation: pulse 1.5s infinite; }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
 
-    <div class="bg-black text-white py-2 px-4 text-center text-xs tracking-widest uppercase">
+    <div class="bg-black text-white py-2.5 px-4 text-center text-[10px] sm:text-xs tracking-[0.2em] uppercase font-medium">
         ✨ Plus de 3 000 étudiants ont fait confiance à Segundo Primo cette année
     </div>
 
-    <nav class="border-b border-gray-100 py-4 px-6 flex justify-between items-center sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div class="text-2xl font-black tracking-tighter text-black">SEGUNDO<span class="text-yellow-600">PRIMO</span></div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-tight">
-            <a href="#" class="hover:text-yellow-600">Sacs Portés Épaule</a>
-            <a href="#" class="hover:text-yellow-600">Sacs à Main</a>
-            <a href="#" class="hover:text-yellow-600">Authenticité</a>
-        </div>
-        <div class="flex items-center space-x-4">
-            <span class="text-xs font-bold border-2 border-green-500 text-green-600 px-2 py-1 rounded">Vendeur Certifié</span>
+    <nav class="border-b border-gray-100 bg-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <div class="text-2xl font-black tracking-tighter text-black flex-shrink-0 cursor-pointer">
+                    SEGUNDO<span class="text-amber-600">PRIMO</span>
+                </div>
+
+                <div class="hidden md:flex flex-1 max-w-xl mx-10">
+                    <div class="relative w-full">
+                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </span>
+                        <input type="text" placeholder="Rechercher un modèle, une marque, une couleur..." 
+                               class="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg leading-5 bg-gray-50 placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-amber-500 focus:border-amber-500 sm:text-sm transition">
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <button class="text-gray-600 hover:text-black hidden sm:block"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></button>
+                    <button class="bg-black text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-amber-600 transition">Vendre</button>
+                </div>
+            </div>
+
+            <div class="flex justify-center space-x-4 md:space-x-10 py-3 overflow-x-auto no-scrollbar whitespace-nowrap border-t border-gray-50">
+                <a href="#" class="nav-link text-[11px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Nouveautés</a>
+                <a href="#" class="nav-link text-[11px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Sacs iconiques</a>
+                <a href="#" class="nav-link text-[11px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Moins de 300€</a>
+                <a href="#" class="nav-link text-[11px] font-bold uppercase tracking-wider text-gray-600 hover:text-black">Moins de 500€</a>
+                <a href="#" class="nav-link text-[11px] font-bold uppercase tracking-wider text-red-600 flex items-center">
+                    <span class="urgent-tag mr-1">🔥</span> Dernières pièces
+                </a>
+            </div>
         </div>
     </nav>
 
-    <header class="py-12 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <h1 class="text-5xl md:text-7xl mb-6">Le luxe accessible, <br><span class="italic text-gray-500 text-4xl">certifié pour vous.</span></h1>
-            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
-                Accédez aux plus grandes maisons de couture avec des remises allant jusqu'à -70%. 
-                Chaque pièce est expertisée physiquement par nos ateliers.
-            </p>
-            <div class="flex space-x-4">
-                <button class="bg-black text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition">Voir la collection</button>
-                <button class="border border-black px-8 py-4 rounded-full font-bold hover:bg-gray-100">Vendre un sac</button>
+    <header class="bg-amber-50/50 py-10 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <div class="inline-block bg-white px-3 py-1 rounded-full text-[10px] font-bold text-amber-700 border border-amber-200 mb-4 uppercase tracking-widest">Le luxe 100% sécurisé</div>
+                <h1 class="text-4xl md:text-6xl mb-4 leading-tight">Le sac de vos rêves,<br><span class="text-amber-600 italic">à prix étudiant.</span></h1>
+                <p class="text-gray-600 mb-6 max-w-md">Authentification physique systématique. Paiement en 3x disponible pour tous les étudiants certifiés.</p>
+                <div class="flex items-center space-x-4">
+                    <div class="flex -space-x-2">
+                        <img src="https://i.pravatar.cc/100?u=1" class="w-8 h-8 rounded-full border-2 border-white">
+                        <img src="https://i.pravatar.cc/100?u=2" class="w-8 h-8 rounded-full border-2 border-white">
+                        <img src="https://i.pravatar.cc/100?u=3" class="w-8 h-8 rounded-full border-2 border-white">
+                    </div>
+                    <span class="text-xs font-semibold text-gray-500">+12 inscrits ce matin</span>
+                </div>
             </div>
-        </div>
-        <div class="relative">
-            <img src="https://images.unsplash.com/photo-1584917033904-493bb3c3af15?auto=format&fit=crop&w=800&q=80" alt="Sac de luxe" class="rounded-2xl shadow-2xl">
-            <div class="absolute -bottom-6 -left-6 bg-white p-4 shadow-xl rounded-lg border border-gray-100">
-                <p class="text-xs text-gray-400 uppercase font-bold">Dernière vente</p>
-                <p class="text-sm font-bold text-green-600">Louis Vuitton Speedy 30 — Vendu en 4 min</p>
+            <div class="md:w-1/3">
+                <div class="bg-white p-2 rounded-2xl shadow-xl transform rotate-2">
+                    <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?auto=format&fit=crop&w=600&q=80" alt="Sac de luxe" class="rounded-xl">
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="py-16 bg-gray-50 px-6">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl mb-10 text-center">Sélection Prioritaire Étudiants</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="bg-white group cursor-pointer overflow-hidden rounded-xl shadow-sm border border-gray-100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-3 left-3 bg-white/90 px-3 py-1 rounded-full text-[10px] font-black uppercase flex items-center shadow-sm">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Authentifié par Segundo
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-1">Cabas Vintage "G"</h3>
-                        <p class="text-xs text-gray-500 mb-4 italic italic">Vendu par Marie, étudiante à l'ESCP ★★★★★</p>
-                        <div class="flex items-end justify-between">
-                            <div>
-                                <span class="text-gray-400 line-through text-sm">Prix Boutique : 1 200€</span>
-                                <p class="text-2xl font-black text-black">450€</p>
-                            </div>
-                            <button class="bg-black text-white px-4 py-2 rounded text-sm font-bold uppercase hover:bg-yellow-600">Ajouter</button>
-                        </div>
+    <section class="py-12 max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-end mb-10">
+            <h2 class="text-2xl font-bold">Sélection "Moins de 300€"</h2>
+            <a href="#" class="text-sm underline font-medium">Tout voir</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="group cursor-pointer">
+                <div class="relative mb-4 aspect-[3/4] overflow-hidden bg-gray-100 rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1566150905458-1bf1fd113961?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <div class="absolute top-4 left-4 bg-white/90 px-2 py-1 text-[9px] font-bold uppercase tracking-tighter flex items-center">
+                        <svg class="w-3 h-3 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path></svg>
+                        Authenticité Garantie
                     </div>
                 </div>
+                <h3 class="font-bold text-sm uppercase tracking-wide">Pochette Jacquemus</h3>
+                <p class="text-xs text-gray-500 mb-2">État : Excellent • Vendu par Chloé (Étudiante Lyon)</p>
+                <div class="flex items-baseline space-x-3">
+                    <span class="text-xl font-black">285€</span>
+                    <span class="text-xs text-gray-400 line-through">Boutique : 550€</span>
+                    <span class="text-[10px] font-bold text-green-600 bg-green-50 px-1 text-center">-48%</span>
+                </div>
+            </div>
 
-                <div class="bg-white group cursor-pointer overflow-hidden rounded-xl shadow-sm border border-gray-100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=600&q=80" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-3 left-3 bg-white/90 px-3 py-1 rounded-full text-[10px] font-black uppercase flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Authentifié par Segundo
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-1">Sac Bandoulière Croco</h3>
-                        <p class="text-xs text-gray-400 mb-4 italic italic">Vendeur Premium Certifié ✅</p>
-                        <div class="flex items-end justify-between">
-                            <div>
-                                <span class="text-gray-400 line-through text-sm">Prix Boutique : 890€</span>
-                                <p class="text-2xl font-black text-black">210€</p>
-                            </div>
-                            <button class="bg-black text-white px-4 py-2 rounded text-sm font-bold uppercase hover:bg-yellow-600">Ajouter</button>
-                        </div>
+            <div class="group cursor-pointer">
+                <div class="relative mb-4 aspect-[3/4] overflow-hidden bg-gray-100 rounded-sm">
+                    <img src="https://images.unsplash.com/photo-1598532163257-ae3c6b2524b6?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                    <div class="absolute top-4 right-4 bg-red-600 text-white px-2 py-1 text-[9px] font-bold uppercase tracking-tighter">
+                        Dernière pièce 🔥
                     </div>
                 </div>
-
-                <div class="bg-white group cursor-pointer overflow-hidden rounded-xl shadow-sm border border-gray-100">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=600&q=80" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute top-3 left-3 bg-white/90 px-3 py-1 rounded-full text-[10px] font-black uppercase flex items-center">
-                            <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span> Authentifié par Segundo
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-lg mb-1">Pochette de Soirée Noire</h3>
-                        <p class="text-xs text-gray-400 mb-4 italic italic">Vendeur Pro - Neuf avec étiquette</p>
-                        <div class="flex items-end justify-between">
-                            <div>
-                                <span class="text-gray-400 line-through text-sm">Prix Boutique : 2 400€</span>
-                                <p class="text-2xl font-black text-black">780€</p>
-                            </div>
-                            <button class="bg-black text-white px-4 py-2 rounded text-sm font-bold uppercase hover:bg-yellow-600">Ajouter</button>
-                        </div>
-                    </div>
+                <h3 class="font-bold text-sm uppercase tracking-wide">Cabas Prada Vintage</h3>
+                <p class="text-xs text-gray-500 mb-2">État : Très bon • Vendeur Certifié ✅</p>
+                <div class="flex items-baseline space-x-3">
+                    <span class="text-xl font-black">490€</span>
+                    <span class="text-xs text-gray-400 line-through">Boutique : 1 100€</span>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <div id="chat-window" class="fixed bottom-6 right-6 z-[100] w-80 bg-white shadow-2xl rounded-2xl border border-gray-200 hidden overflow-hidden">
-        <div class="bg-black p-4 text-white font-bold flex justify-between items-center">
-            <span>Assistant Shopping</span>
-            <button onclick="toggleChat()" class="text-gray-400 hover:text-white">✕</button>
-        </div>
-        <div class="p-4 h-64 overflow-y-auto text-sm space-y-4" id="chat-content">
-            <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
-                Bonjour ! Je cherche le sac idéal pour tes cours ou tes sorties ? 👜
+    <div id="chatbot" class="fixed bottom-6 right-6 z-[100] w-72 bg-white shadow-2xl rounded-2xl border border-gray-100 overflow-hidden transform transition-all duration-300 translate-y-0">
+        <div class="bg-black p-4 text-white flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                <span class="text-xs font-bold uppercase tracking-widest">Assistant Segundo</span>
             </div>
-            <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
-                On m'a dit que tu aimais les sacs de luxe, mais j'ai aussi des pépites à moins de 200€ si tu veux !
+            <button onclick="document.getElementById('chatbot').classList.toggle('hidden')" class="text-gray-400">✕</button>
+        </div>
+        <div class="p-4 h-48 overflow-y-auto text-xs space-y-4 bg-gray-50" id="chat-box">
+            <div class="bg-white p-3 rounded-lg border border-gray-100 shadow-sm text-gray-700">
+                "Ce sac est un peu cher ? J'ai trouvé 3 modèles similaires à moins de 200€ pour ton budget étudiant. Tu veux les voir ?"
             </div>
         </div>
-        <div class="p-3 border-t">
-            <input type="text" placeholder="Répondre..." class="w-full border-none focus:ring-0 text-sm">
+        <div class="p-3 bg-white">
+            <button class="w-full bg-amber-600 text-white py-2 rounded-md text-[10px] font-bold uppercase tracking-widest hover:bg-black transition">Voir les options abordables</button>
         </div>
     </div>
 
-    <button onclick="toggleChat()" class="fixed bottom-6 right-6 bg-black text-white p-4 rounded-full shadow-2xl z-[101] hover:scale-110 transition">
-        💬 Aide au Choix
-    </button>
-
-    <footer class="bg-white border-t py-12 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex flex-wrap justify-center gap-8 mb-8 opacity-50 font-bold uppercase text-[10px] tracking-widest">
-                <span>🔒 Paiement SSL Sécurisé</span>
-                <span>🛡️ Garantie d'Authenticité</span>
-                <span>🔄 Retours Sous 14 Jours</span>
+    <footer class="bg-gray-50 border-t border-gray-200 py-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="text-[10px] font-black uppercase mb-4 tracking-widest text-gray-400">Sécurité</h4>
+                <p class="text-xs font-semibold">Paiement 100% crypté</p>
             </div>
-            <p class="text-gray-400 text-xs">© 2026 Segundo Primo - La plateforme préférée des étudiants pour le luxe.</p>
+            <div>
+                <h4 class="text-[10px] font-black uppercase mb-4 tracking-widest text-gray-400">Expertise</h4>
+                <p class="text-xs font-semibold">Certifié par nos experts</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase mb-4 tracking-widest text-gray-400">Étudiants</h4>
+                <p class="text-xs font-semibold">Avantages Unidays & StudentBeans</p>
+            </div>
+            <div>
+                <h4 class="text-[10px] font-black uppercase mb-4 tracking-widest text-gray-400">Contact</h4>
+                <p class="text-xs font-semibold">Support 24/7 via Chat</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        function toggleChat() {
-            const chat = document.getElementById('chat-window');
-            chat.classList.toggle('hidden');
-        }
+</body>
+</html>
     </script>
 </body>
 </html>
