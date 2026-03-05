@@ -19,12 +19,12 @@
 
         .btn-luxury {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            letter-spacing: 0.1em;
         }
         .btn-luxury:hover {
-            transform: scale(1.05);
-            background-color: #f59e0b;
+            transform: scale(1.05) translateY(-5px);
+            background-color: #f59e0b; /* Amber 500 */
             color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
     </style>
 </head>
@@ -39,7 +39,7 @@
             <a href="#" class="hover:text-amber-500 transition">Nouveautés</a>
             <a href="#" class="hover:text-amber-500 transition">Sacs Iconiques</a>
             <a href="#" class="hover:text-amber-500 transition">Moins de 300€</a>
-            <a href="#" class="text-amber-500">Dernières Pièces 🔥</a>
+            <a href="#" class="text-amber-500 font-black">Dernières Pièces 🔥</a>
         </div>
 
         <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">
@@ -51,29 +51,29 @@
         
         <div class="text-center px-6 max-w-5xl">
             
-            <h1 class="text-4xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6 tracking-tight">
+            <h1 class="text-4xl md:text-7xl lg:text-[85px] font-serif text-white leading-tight mb-6 tracking-tight">
                 Le luxe sans le <br>
                 <span class="italic text-amber-500 font-light">découvert.</span>
             </h1>
 
-            <p class="text-white/70 text-sm md:text-lg mb-10 max-w-xl mx-auto font-light leading-relaxed tracking-wide">
+            <p class="text-white/70 text-sm md:text-lg mb-12 max-w-xl mx-auto font-light leading-relaxed tracking-wide">
                 Pièces iconiques de seconde main, expertisées physiquement <br class="hidden md:block"> 
                 et garanties à vie pour la communauté étudiante.
             </p>
 
-            <button class="btn-luxury bg-white text-black px-12 py-5 rounded-full text-xs md:text-sm font-black uppercase shadow-2xl">
+            <button class="btn-luxury bg-white text-black px-12 md:px-20 py-6 md:py-8 rounded-full text-lg md:text-xl font-black uppercase tracking-[0.2em] shadow-2xl">
                 Trouver mon sac
             </button>
             
-            <div class="mt-10 flex flex-col items-center space-y-3">
-                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                    <span class="flex h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></span>
-                    <p class="text-[9px] md:text-[10px] font-medium text-white/90 uppercase tracking-[0.2em]">
+            <div class="mt-14 flex flex-col items-center space-y-4">
+                <div class="inline-flex items-center space-x-2 px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-green-400"></span>
+                    <p class="text-[9px] md:text-[10px] font-medium text-white uppercase tracking-[0.2em]">
                         +3000 étudiantes certifiées nous font confiance
                     </p>
                 </div>
                 
-                <div class="flex space-x-6 text-white/40 text-[9px] font-bold uppercase tracking-widest">
+                <div class="flex space-x-8 text-white/40 text-[9px] font-bold uppercase tracking-widest italic">
                     <span>Authenticité 100%</span>
                     <span>Paiement 3X</span>
                     <span>Retours Offerts</span>
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-10 w-full flex justify-center opacity-30">
+        <div class="absolute bottom-8 w-full flex justify-center opacity-30">
             <div class="w-5 h-8 border border-white rounded-full flex justify-center pt-1">
                 <div class="w-0.5 h-1.5 bg-white rounded-full"></div>
             </div>
