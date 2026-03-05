@@ -1,34 +1,82 @@
-<header class="relative bg-white pt-16 pb-24 px-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Primo | L'Expérience Luxe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
         
-        <div class="md:w-1/2 z-10 text-center md:text-left">
-            <p class="text-amber-600 font-bold text-xs uppercase tracking-[0.3em] mb-4">
-                Élu site N°1 par +3 000 étudiants
-            </p>
-            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight tracking-tight">
-                Le luxe, sans le <span class="italic text-gray-400">découvert.</span>
-            </h1>
-            <p class="text-gray-500 text-lg mb-10 max-w-md mx-auto md:mx-0 leading-relaxed">
-                Sacs de seconde main certifiés. De -30% à -70% toute l'année pour la communauté étudiante.
-            </p>
+        /* Effet d'immersion : Image de fond fixe */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Animation du bouton "Glow" */
+        .btn-glow:hover {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-black antialiased">
+
+    <nav class="absolute top-0 w-full z-50 flex justify-between items-center px-8 py-6 text-white">
+        <div class="text-3xl font-black tracking-tighter">SEGUNDO<span class="text-amber-500">PRIMO</span></div>
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em]">
+            <a href="#" class="hover:text-amber-500 transition">Nouveautés</a>
+            <a href="#" class="hover:text-amber-500 transition">Sacs Iconiques</a>
+            <a href="#" class="text-red-500 animate-pulse">Dernières Pièces 🔥</a>
+        </div>
+        <button class="border border-white/30 backdrop-blur-md px-6 py-2 rounded-full text-xs font-bold hover:bg-white hover:text-black transition">VENDRE</button>
+    </nav>
+
+    <section class="hero-bg h-screen flex items-center justify-center relative overflow-hidden">
+        
+        <div class="z-10 text-center px-4 max-w-5xl">
+            <span class="inline-block mb-6 px-4 py-1.5 border border-amber-500/50 rounded-full text-amber-400 text-[10px] font-bold uppercase tracking-[0.4em] backdrop-blur-sm bg-black/20">
+                La certification luxe par les étudiants
+            </span>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <button class="bg-black text-white px-10 py-5 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-amber-600 transition-all shadow-xl hover:scale-105">
-                    Chiner mon sac
+            <h1 class="text-6xl md:text-[120px] font-serif text-white leading-none mb-8 tracking-tighter">
+                Le Sac de vos <br><span class="italic text-amber-500">Désirs.</span>
+            </h1>
+
+            <p class="text-gray-200 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Rejoignez 3 000 étudiants qui s'offrent le meilleur du luxe à prix cassé. <br>
+                Authenticité certifiée par nos experts. 
+            </p>
+
+            <div class="relative inline-block group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-amber-600 to-yellow-400 rounded-full blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                <button class="relative btn-glow bg-white text-black px-12 py-6 rounded-full text-lg font-black uppercase tracking-[0.2em] transition-all duration-300">
+                    Chiner Maintenant
                 </button>
-                <button class="flex items-center justify-center space-x-2 text-sm font-bold border-b-2 border-black pb-1 hover:text-amber-600 hover:border-amber-600 transition">
-                    <span>Comment on authentifie ?</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
-                </button>
+            </div>
+            
+            <div class="mt-16 flex flex-col items-center">
+                <div class="flex -space-x-3 mb-3">
+                    <img src="https://i.pravatar.cc/100?u=a" class="w-10 h-10 rounded-full border-2 border-white">
+                    <img src="https://i.pravatar.cc/100?u=b" class="w-10 h-10 rounded-full border-2 border-white">
+                    <img src="https://i.pravatar.cc/100?u=c" class="w-10 h-10 rounded-full border-2 border-white">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 border-2 border-white flex items-center justify-center text-[10px] font-bold">+12</div>
+                </div>
+                <p class="text-white/60 text-[10px] uppercase font-bold tracking-widest italic">Ventes en temps réel sur le campus</p>
             </div>
         </div>
 
-        <div class="md:w-1/2 mt-16 md:mt-0 relative flex justify-center">
-            <div class="absolute inset-0 bg-amber-50 rounded-full scale-110 -z-10 opacity-50"></div>
-            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" 
-                 alt="Sac de luxe" 
-                 class="w-full max-w-md object-contain drop-shadow-2xl transform hover:rotate-2 transition duration-500">
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/40 space-y-2">
+            <span class="text-[9px] font-bold uppercase tracking-widest">Découvrir la collection</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-white/40 to-transparent"></div>
         </div>
 
-    </div>
-</header>
+    </section>
+
+</body>
+</html>
