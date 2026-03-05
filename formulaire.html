@@ -1,62 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<title>Inscription</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Segundo Primo | Rejoindre l'Élite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #000;
+        }
+
+        /* Image de fond immersive avec la femme et la boîte mystère */
+        .bg-mystery {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1920&q=80'); /* Image symbolisant l'ouverture d'un cadeau/boite */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Effet Glassmorphism pour le formulaire */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .form-control, .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #f59e0b;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Bouton Massif inspiré de ton style */
+        .btn-claim {
+            background: #fff;
+            color: #000;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-radius: 50px;
+            padding: 18px;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn-claim:hover {
+            background: #f59e0b;
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        .checkbox-custom {
+            accent-color: #f59e0b;
+        }
+    </style>
 </head>
+<body>
 
+<div class="bg-mystery">
+    <div class="container" style="max-width: 500px;">
+        <div class="glass-card text-light">
+            
+            <div class="text-center mb-4">
+                <span class="badge bg-amber-500 text-dark mb-2" style="background-color: #f59e0b;">OFFRE VIP</span>
+                <h1 class="h2 font-weight-bold">Ouvrez votre accès</h1>
+                <p class="text-white-50 small">Rejoignez 3 000+ membres et recevez vos privilèges Segundo Primo.</p>
+            </div>
 
-<body class="bg-dark text-light">
+            <form action="merci.html">
+                <div class="mb-3">
+                    <label class="form-label">Nom complet</label>
+                    <input class="form-control" type="text" placeholder="Ex: Marie Durant" required>
+                </div>
 
+                <div class="mb-3">
+                    <label class="form-label">Email étudiant</label>
+                    <input class="form-control" type="email" placeholder="nom@ecole.fr" required>
+                </div>
 
-<div class="container py-5" style="max-width:600px">
+                <div class="mb-4">
+                    <label class="form-label">Quel sac vous fait rêver ?</label>
+                    <select class="form-select text-white-50">
+                        <option selected disabled>Choisir un style...</option>
+                        <option>Iconiques (Chanel, LV, Gucci)</option>
+                        <option>Minimalistes (Celine, Polène)</option>
+                        <option>Vintage & Pépites à < 300€</option>
+                    </select>
+                </div>
 
+                <div class="form-check mb-4">
+                    <input class="form-check-input checkbox-custom" type="checkbox" id="newsletter" required>
+                    <label class="form-check-label small text-white-50" for="newsletter">
+                        Je veux recevoir les <strong>Mystery Boxes</strong> et les alertes ventes privées (jusqu'à -70%).
+                    </label>
+                </div>
 
-<h1 class="h3 mb-3">Réserver votre place</h1>
+                <button class="btn btn-claim w-100 mb-3" type="submit">
+                    Débloquer mes avantages
+                </button>
 
+                <div class="text-center">
+                    <a href="index.html" class="text-white-50 text-decoration-none small hover-white">← Retour au site</a>
+                </div>
+            </form>
 
-<p class="text-secondary">Complétez ce formulaire pour accéder à la formation.</p>
-
-
-<form action="merci.html">
-
-
-<div class="mb-3">
-<label class="form-label">Nom</label>
-<input class="form-control" type="text" required>
+        </div>
+    </div>
 </div>
 
-
-<div class="mb-3">
-<label class="form-label">Email</label>
-<input class="form-control" type="email" required>
-</div>
-
-
-<div class="mb-3">
-<label class="form-label">Votre objectif</label>
-<select class="form-select">
-<option>Créer du contenu avec l'IA</option>
-<option>Optimiser mes campagnes marketing</option>
-<option>Comprendre le cloud et les landing pages</option>
-</select>
-</div>
-
-
-<button class="btn btn-primary btn-lg w-100" type="submit">
-Je confirme mon inscription
-</button>
-
-
-<a class="btn btn-outline-light w-100 mt-2" href="index.html">Retour</a>
-
-
-</form>
-
-
-</div>
-
+</body>
+</html>
 
 </body>
 </html>
