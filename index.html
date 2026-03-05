@@ -3,109 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segundo Primo | L'Alternative Luxe Étudiante</title>
+    <title>Segundo Primo | Le luxe sans le découvert</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Polices : Montserrat pour le fonctionnel, Cormorant pour le luxe */
-        body { font-family: 'Montserrat', sans-serif; }
-        .font-luxury { font-family: 'Cormorant Garamond', serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
         
-        .hero-bg {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1920&q=90');
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1920&q=90');
             background-size: cover;
             background-position: center;
         }
 
-        /* Logo stylisé : Lettres espacées et mélange de graisses */
-        .logo-text {
-            letter-spacing: 0.4em;
-            text-transform: uppercase;
+        .btn-luxury {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            letter-spacing: 0.1em;
         }
-
-        /* Bouton affiné */
-        .btn-elegant {
-            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-            letter-spacing: 0.2em;
-        }
-        .btn-elegant:hover {
-            letter-spacing: 0.3em;
-            background-color: #f3f4f6;
-            color: #000;
+        .btn-luxury:hover {
+            transform: scale(1.05);
+            background-color: #f59e0b;
+            color: white;
         }
     </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-white antialiased overflow-x-hidden">
 
-    <div class="bg-[#f9f7f2] text-[#8a7d6a] py-2 px-4 text-center text-[10px] tracking-[0.15em] font-medium border-b border-gray-100">
-        LE DRESSING PARTAGÉ DE 3 240 ÉTUDIANTES CERTIFIÉES • LIVRAISON SÉCURISÉE
-    </div>
-
-    <nav class="flex justify-between items-center px-10 py-6 border-b border-gray-50 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div class="logo-text text-[13px] font-light">
-            Segundo <span class="font-bold italic text-amber-700">Primo</span>
+    <nav class="absolute top-0 w-full z-50 flex justify-between items-center px-8 md:px-16 py-10">
+        <div class="text-xl md:text-2xl font-extrabold tracking-tighter text-white uppercase">
+            Segundo<span class="text-amber-500 underline decoration-1 underline-offset-4 text-sm ml-1 uppercase font-light tracking-widest">Primo</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">
+            <a href="#" class="hover:text-amber-500 transition">Nouveautés</a>
+            <a href="#" class="hover:text-amber-500 transition">Sacs Iconiques</a>
+            <a href="#" class="hover:text-amber-500 transition">Moins de 300€</a>
+            <a href="#" class="text-amber-500">Dernières Pièces 🔥</a>
         </div>
 
-        <div class="hidden md:flex space-x-8 text-[10px] font-medium uppercase tracking-widest text-gray-500">
-            <a href="#" class="hover:text-black transition">Nouveautés</a>
-            <a href="#" class="hover:text-black transition">Iconiques</a>
-            <a href="#" class="hover:text-black transition">Moins de 300€</a>
-            <a href="#" class="text-red-800 font-bold tracking-tighter">Ventes Flash</a>
-        </div>
-
-        <div class="flex items-center space-x-6">
-            <button class="text-[10px] font-bold tracking-widest border-b border-black pb-0.5">VENDRE</button>
-            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </div>
+        <button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-full text-[9px] font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">
+            Vendre
+        </button>
     </nav>
 
-    <section class="hero-bg h-[85vh] flex items-center justify-center text-center px-6 relative">
-        <div class="max-w-4xl">
-            <p class="text-white text-[11px] tracking-[0.5em] uppercase mb-6 font-light">
-                Expertise & Seconde Main
-            </p>
-
-            <h1 class="font-luxury text-white text-5xl md:text-7xl lg:text-8xl leading-tight mb-10">
+    <header class="hero-section h-screen w-full flex items-center justify-center relative">
+        
+        <div class="text-center px-6 max-w-5xl">
+            
+            <h1 class="text-4xl md:text-7xl lg:text-8xl font-serif text-white leading-tight mb-6 tracking-tight">
                 Le luxe sans le <br>
-                <span class="italic font-light text-white/90">découvert.</span>
+                <span class="italic text-amber-500 font-light">découvert.</span>
             </h1>
 
-            <p class="text-white/70 font-light text-sm md:text-base max-w-lg mx-auto mb-12 leading-relaxed tracking-wide">
-                Une sélection rigoureuse de sacs iconiques authentifiés, <br>
-                adaptée au budget de ceux qui font demain.
+            <p class="text-white/70 text-sm md:text-lg mb-10 max-w-xl mx-auto font-light leading-relaxed tracking-wide">
+                Pièces iconiques de seconde main, expertisées physiquement <br class="hidden md:block"> 
+                et garanties à vie pour la communauté étudiante.
             </p>
 
-            <button class="btn-elegant bg-transparent border border-white text-white px-12 py-5 text-[11px] font-bold uppercase hover:bg-white hover:text-black">
-                Découvrir la sélection
+            <button class="btn-luxury bg-white text-black px-12 py-5 rounded-full text-xs md:text-sm font-black uppercase shadow-2xl">
+                Trouver mon sac
             </button>
+            
+            <div class="mt-10 flex flex-col items-center space-y-3">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
+                    <span class="flex h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></span>
+                    <p class="text-[9px] md:text-[10px] font-medium text-white/90 uppercase tracking-[0.2em]">
+                        +3000 étudiantes certifiées nous font confiance
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6 text-white/40 text-[9px] font-bold uppercase tracking-widest">
+                    <span>Authenticité 100%</span>
+                    <span>Paiement 3X</span>
+                    <span>Retours Offerts</span>
+                </div>
+            </div>
         </div>
 
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30">
-            <div class="w-[1px] h-10 bg-white/30 mx-auto"></div>
-        </div>
-    </section>
-
-    <div class="bg-white py-10 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-2">Authentification</p>
-                <p class="font-luxury text-xl">100% Garantie</p>
-            </div>
-            <div>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-2">Paiement</p>
-                <p class="font-luxury text-xl">3x sans frais</p>
-            </div>
-            <div>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-2">Communauté</p>
-                <p class="font-luxury text-xl">Étudiante & Certifiée</p>
-            </div>
-            <div>
-                <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400 mb-2">Retours</p>
-                <p class="font-luxury text-xl">14 jours offerts</p>
+        <div class="absolute bottom-10 w-full flex justify-center opacity-30">
+            <div class="w-5 h-8 border border-white rounded-full flex justify-center pt-1">
+                <div class="w-0.5 h-1.5 bg-white rounded-full"></div>
             </div>
         </div>
-    </div>
+    </header>
 
 </body>
 </html>
